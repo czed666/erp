@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>DC POS</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="login-page.css"
+    />
+  </head>
+  <body>
+    <div class="main-container">
+      <div class="main-logo-container">
+        <img
+          src="dc-logo.png"
+          alt="logo"
+          class="main-logo"
+        />
+        <h1>POS LOGIN</h1>
+      </div>
+      <div>
+        <select name="user-type" class="user-type-select">
+          <option value="admin">Employee 1</option>
+          <option value="cashier">Employee 2</option>
+          <option value="manager">Employee 3</option>
+        </select>
+        <input
+          type="password"
+          id="pin"
+          placeholder="Enter PIN"
+          class="pin-input"
+        />
+        <div class="keypad">
+          <button class="key" data-value="1">1</button>
+          <button class="key" data-value="2">2</button>
+          <button class="key" data-value="3">3</button>
+          <button class="key" data-value="4">4</button>
+          <button class="key" data-value="5">5</button>
+          <button class="key" data-value="6">6</button>
+          <button class="key" data-value="7">7</button>
+          <button class="key" data-value="8">8</button>
+          <button class="key" data-value="9">9</button>
+          <button class="key clear" data-value="clear">
+            Clear
+          </button>
+          <button class="key zero" data-value="0">0</button>
+          <button
+            class="key backspace"
+            data-value="backspace"
+          >
+            ⬅︎
+          </button>
+          <button class="key enter" data-value="enter">
+            LOGIN
+          </button>
+        </div>
+      </div>
+    </div>
+    <script src="/login.js"></script>
+  </body>
+</html>
