@@ -65,11 +65,8 @@ function loginPOS() {
       withCredentials: true, // <-- this is critical
     },
     data: { usr, pwd },
-    success: function (data) {
-      window.open(
-        `http://192.168.0.222 + ${data.home_page}`,
-        "_blank"
-      );
+    success: function () {
+      window.open(`http://192.168.0.222 `, "_blank");
     },
     error: function () {
       $("#error-message").text(
