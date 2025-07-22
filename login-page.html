@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html>
   <head>
     <title>DC POS</title>
     <link
@@ -6,6 +6,7 @@
       type="text/css"
       href="login-page.css"
     />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   </head>
   <body>
     <div class="main-container">
@@ -15,16 +16,16 @@
           alt="logo"
           class="main-logo"
         />
-        <h1>POS LOGIN</h1>
+        <p id="error-message"></p>
       </div>
-      <div>
-        <select name="user-type" class="user-type-select">
-          <option value="admin">Employee 1</option>
-          <option value="cashier">Employee 2</option>
-          <option value="manager">Employee 3</option>
+<div class="login-container">
+        <select id="user-dropdown" name="user-type" class="user-type-select">
+          <option value="one">Employee 1</option>
+          <option value="two">Employee 2</option>
+          <option value="three">Employee 3</option>
         </select>
         <input
-          type="password"
+          type="text"
           id="pin"
           placeholder="Enter PIN"
           class="pin-input"
@@ -49,12 +50,16 @@
           >
             ⬅︎
           </button>
-          <button class="key enter" data-value="enter">
+          <button
+            class="key enter"
+            onclick="loginPOS()"
+          >
             LOGIN
           </button>
         </div>
+
       </div>
     </div>
-    <script src="/login.js"></script>
+    <script src="login.js"></script>
   </body>
 </html>
